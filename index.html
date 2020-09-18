@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: url("https://i.pinimg.com/originals/d9/1a/92/d91a92581c3e0209d7080c96000c5912.jpg");
+        height: 100vh;
+        -webkit-clip-path: polygon(
+          0% 0%,
+          100% 0%,
+          100% 75%,
+          0% 100%,
+          0% 0%
+        ) !important;
+        -moz-clip-path: polygon(
+          0% 0%,
+          100% 0%,
+          100% 75%,
+          0% 100%,
+          0% 0%
+        ) !important;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 100%, 0% 0%) !important;
+      }
+      .mid {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      input {
+        font-size: 3rem;
+        border-radius: 500px;
+        text-align: center;
+      }
+      button {
+        font-size: 2rem;
+        padding: 1rem;
+        border-radius: 500px;
+        text-align: center;
+        background-color: white;
+        border: 2px solid #0099ff;
+        color: #0099ff;
+        transition: all 500ms;
+      }
+      button:hover {
+        color: #ffffff;
+        background-color: #0099ff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mid">
+      <input type="text" id="inp" />
+      <button onclick="Search()" type="submit">Search</button>
+    </div>
+  </body>
+  <script>
+    function Search() {
+      let inp = document.getElementById("inp").value;
+      console.log(inp);
+      window.location = `https://www.google.com/search?client=firefox-b-d&q=${inp}`;
+      return false;
+    }
+  </script>
+</html>
